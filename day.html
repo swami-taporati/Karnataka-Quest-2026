@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day Missions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2 id="teamName"></h2>
+  <h3>Day 1 – Train</h3>
+
+  <ul>
+    <li><a href="mission.html?mission=observe">Mission 1 – Observe</a></li>
+    <li><a href="mission.html?mission=quiz">Mission 2 – Quiz</a></li>
+    <li><a href="fragments.html">Hidden Fragments</a></li>
+    <li><a href="leaderboard.html">Leaderboard</a></li>
+  </ul>
+
+  <script src="data.js"></script>
+  <script>
+    const teamKey = localStorage.getItem("team");
+    document.getElementById("teamName").innerText = 
+      "Team: " + teams[teamKey].name;
+  </script>
+</body>
+</html>
