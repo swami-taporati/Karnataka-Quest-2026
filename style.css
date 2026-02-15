@@ -1,0 +1,30 @@
+body {
+  font-family: serif;
+  text-align: center;
+  background: #f5f1e6;
+  padding: 20px;
+}
+
+.card {
+  margin: auto;
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  font-size: 30px;
+}
+
+.locked {
+  background: #ddd;
+  padding: 20px;
+}
