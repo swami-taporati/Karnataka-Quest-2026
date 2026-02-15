@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bharat Darshan Quest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Bharat Darshan Quest</h1>
+  <h3>The Civilisation Cup</h3>
+
+  <div class="card">
+    <label>Select Team:</label>
+    <select id="teamSelect">
+      <option value="">-- Choose Team --</option>
+      <option value="team1">Team 1</option>
+      <option value="team2">Team 2</option>
+      <option value="team3">Team 3</option>
+      <option value="team4">Team 4</option>
+      <option value="team5">Team 5</option>
+    </select>
+
+    <label>Enter PIN:</label>
+    <input type="password" id="pinInput">
+
+    <button onclick="login()">Enter Quest</button>
+  </div>
+
+  <script src="data.js"></script>
+  <script>
+    function login() {
+      const team = document.getElementById("teamSelect").value;
+      const pin = document.getElementById("pinInput").value;
+
+      if (team && teams[team].pin === pin) {
+        localStorage.setItem("team", team);
+        window.location.href = "day.html";
+      } else {
+        alert("Invalid PIN");
+      }
+    }
+  </script>
+</body>
+</html>
