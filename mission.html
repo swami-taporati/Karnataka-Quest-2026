@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mission</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Mission</h2>
+
+<p>What shows this is a living civilisation?</p>
+
+<textarea id="answer" rows="5"></textarea>
+<br>
+<button onclick="submitMission()">Submit</button>
+
+<script>
+function submitMission() {
+  const answer = document.getElementById("answer").value;
+  localStorage.setItem("lastAnswer", answer);
+  alert("Saved locally. Sync later.");
+}
+</script>
+
+</body>
+</html>
